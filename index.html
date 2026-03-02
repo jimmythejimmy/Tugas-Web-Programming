@@ -1,0 +1,340 @@
+<<<<<<< HEAD
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Clone - Notion Hero (Muhammad Yovan Al Farishi)</title>
+  <style>
+    :root{
+      --bg:#0f1720;
+      --card:#122029;
+      --muted:#98a2b3;
+      --accent:#7c5cff;
+      --white:#eef2ff;
+      --radius:10px;
+    }
+    /* Reset ringan */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:var(--bg);
+      color:var(--white);
+      line-height:1.4;
+      padding:24px;
+    }
+
+    /* Page wrapper */
+    .container{max-width:1200px;margin:0 auto;}
+
+    /* NAVBAR (Flexbox place 1) */
+    nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      padding:14px 18px;
+      border-radius:8px;
+      margin-bottom:28px;
+    }
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{
+      width:36px;height:36px;border-radius:8px;
+      background:linear-gradient(135deg,var(--accent),#3b82f6);
+      display:inline-block;
+    }
+    .nav-links{display:flex;gap:14px;align-items:center}
+    .nav-links a{
+      color:var(--white);text-decoration:none;font-weight:600;font-size:14px;opacity:.95
+    }
+    .nav-actions{display:flex;gap:10px;align-items:center}
+    .btn{
+      padding:10px 14px;border-radius:8px;border:0;font-weight:700;cursor:pointer;
+      background:transparent;color:var(--white)
+    }
+    .btn.primary{
+      background:var(--accent);color:white;box-shadow:0 6px 18px rgba(124,92,255,.14)
+    }
+
+    /* HERO (CSS Grid) */
+    header.hero{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:24px;
+      align-items:center;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+      padding:32px;
+      border-radius:var(--radius);
+    }
+    .hero-left{max-width:720px}
+    .kicker{display:inline-block;background:rgba(255,255,255,.03);padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted);margin-bottom:12px}
+    h1{font-size:28px;line-height:1.05;margin-bottom:14px}
+    p.lead{color:var(--muted);margin-bottom:18px;font-size:15px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap} /* Flexbox place 2 */
+    a.cta-link{display:inline-block;padding:12px 16px;border-radius:10px;text-decoration:none;font-weight:700}
+    a.cta-primary{background:var(--accent);color:#fff}
+    a.cta-ghost{border:1px solid rgba(255,255,255,.06);color:var(--white);background:transparent}
+
+    /* Hero side illustration (simple box) */
+    .hero-right{
+      min-height:160px;border-radius:8px;display:flex;align-items:center;justify-content:center;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px solid rgba(255,255,255,.02);
+    }
+    .illus{width:80%;height:120px;background:linear-gradient(90deg,#0ea5a4, #7c5cff);border-radius:8px;opacity:.95}
+
+    
+    footer{margin-top:20px;color:var(--muted);font-size:13px;text-align:center}
+
+    
+    @media (max-width: 400px){
+      body{padding:16px}
+      h1{font-size:22px}
+      .illus{height:100px}
+    }
+    @media (min-width: 1280px){
+      .container{max-width:1280px}
+      header.hero{
+        grid-template-columns: 1fr 420px; /* grid used for desktop layout */
+        gap:36px;
+        padding:40px;
+      }
+      h1{font-size:42px}
+      .logo{width:44px;height:44px}
+    }
+
+    /* Accessibility: focus states */
+    a:focus,button:focus{outline:3px solid rgba(124,92,255,.18);outline-offset:2px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav aria-label="Main navigation">
+      <div class="brand">
+        <span class="logo" aria-hidden="true"></span>
+        <div>
+          <div style="font-weight:800">Notion Clone</div>
+          <div style="font-size:12px;color:var(--muted)">Tugas Web Programming</div>
+        </div>
+      </div>
+
+      <div class="nav-links" role="navigation" aria-label="link group">
+        <a href="#">Produk</a>
+        <a href="#">Templates</a>
+        <a href="#">Pricing</a>
+      </div>
+
+      <div class="nav-actions">
+        <a class="btn" href="#">Masuk</a>
+        <a class="btn primary" href="#">Coba Gratis</a>
+      </div>
+    </nav>
+
+    <header class="hero" role="banner">
+      <div class="hero-left">
+        <div class="kicker">Build better documents</div>
+        <h1>Buat dokumen. Kolaborasi. Selesaikan kerjaan tanpa ribet.</h1>
+        <p class="lead">Template, blok konten, dan kolaborasi real-time. Ringkas workspace-mu dan pindahkan semua catatan kerja ke satu tempat yang rapi.</p>
+
+        <div class="cta" role="group" aria-label="Call to action">
+            <a class="cta-link cta-primary" href="#">Mulai Sekarang — Gratis</a>
+            <a class="cta-link cta-ghost" href="#">Lihat Demo</a>
+            <a class="cta-link cta-ghost" href="CVyovan.html" target="_blank">Lihat CV Saya</a>
+        </div>
+
+      <div class="hero-right" aria-hidden="true">
+        <div class="illus"></div>
+      </div>
+    </header>
+
+    <main>
+      <section aria-label="Kenapa memilih" style="margin-top:20px;padding:20px;border-radius:10px;background:var(--card);">
+        <h2 style="font-size:16px;margin-bottom:8px">Persyaratan tugas (dipenuhi)</h2>
+        <ul style="color:var(--muted);list-style:disc;margin-left:18px">
+          <li>Flexbox digunakan di NAV dan CTA (minimal 2 tempat).</li>
+          <li>CSS Grid digunakan di HERO untuk layout responsif desktop/mobile.</li>
+          <li>Responsive: terlihat baik di ~375px (mobile) dan 1280px (desktop).</li>
+          <li>Semantic HTML: nav, header, main, section, footer, h1/h2, dll.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      Siapkan repo dan deploy ke GitHub Pages, sertakan URL di README.
+    </footer>
+  </div>
+</body>
+=======
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Clone - Notion Hero (Muhammad Yovan Al Farishi)</title>
+  <style>
+    :root{
+      --bg:#0f1720;
+      --card:#122029;
+      --muted:#98a2b3;
+      --accent:#7c5cff;
+      --white:#eef2ff;
+      --radius:10px;
+    }
+    /* Reset ringan */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:var(--bg);
+      color:var(--white);
+      line-height:1.4;
+      padding:24px;
+    }
+
+    /* Page wrapper */
+    .container{max-width:1200px;margin:0 auto;}
+
+    /* NAVBAR (Flexbox place 1) */
+    nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      padding:14px 18px;
+      border-radius:8px;
+      margin-bottom:28px;
+    }
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{
+      width:36px;height:36px;border-radius:8px;
+      background:linear-gradient(135deg,var(--accent),#3b82f6);
+      display:inline-block;
+    }
+    .nav-links{display:flex;gap:14px;align-items:center}
+    .nav-links a{
+      color:var(--white);text-decoration:none;font-weight:600;font-size:14px;opacity:.95
+    }
+    .nav-actions{display:flex;gap:10px;align-items:center}
+    .btn{
+      padding:10px 14px;border-radius:8px;border:0;font-weight:700;cursor:pointer;
+      background:transparent;color:var(--white)
+    }
+    .btn.primary{
+      background:var(--accent);color:white;box-shadow:0 6px 18px rgba(124,92,255,.14)
+    }
+
+    /* HERO (CSS Grid) */
+    header.hero{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:24px;
+      align-items:center;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+      padding:32px;
+      border-radius:var(--radius);
+    }
+    .hero-left{max-width:720px}
+    .kicker{display:inline-block;background:rgba(255,255,255,.03);padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted);margin-bottom:12px}
+    h1{font-size:28px;line-height:1.05;margin-bottom:14px}
+    p.lead{color:var(--muted);margin-bottom:18px;font-size:15px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap} /* Flexbox place 2 */
+    a.cta-link{display:inline-block;padding:12px 16px;border-radius:10px;text-decoration:none;font-weight:700}
+    a.cta-primary{background:var(--accent);color:#fff}
+    a.cta-ghost{border:1px solid rgba(255,255,255,.06);color:var(--white);background:transparent}
+
+    /* Hero side illustration (simple box) */
+    .hero-right{
+      min-height:160px;border-radius:8px;display:flex;align-items:center;justify-content:center;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px solid rgba(255,255,255,.02);
+    }
+    .illus{width:80%;height:120px;background:linear-gradient(90deg,#0ea5a4, #7c5cff);border-radius:8px;opacity:.95}
+
+    
+    footer{margin-top:20px;color:var(--muted);font-size:13px;text-align:center}
+
+    
+    @media (max-width: 400px){
+      body{padding:16px}
+      h1{font-size:22px}
+      .illus{height:100px}
+    }
+    @media (min-width: 1280px){
+      .container{max-width:1280px}
+      header.hero{
+        grid-template-columns: 1fr 420px; /* grid used for desktop layout */
+        gap:36px;
+        padding:40px;
+      }
+      h1{font-size:42px}
+      .logo{width:44px;height:44px}
+    }
+
+    /* Accessibility: focus states */
+    a:focus,button:focus{outline:3px solid rgba(124,92,255,.18);outline-offset:2px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav aria-label="Main navigation">
+      <div class="brand">
+        <span class="logo" aria-hidden="true"></span>
+        <div>
+          <div style="font-weight:800">Notion Clone</div>
+          <div style="font-size:12px;color:var(--muted)">Tugas Web Programming</div>
+        </div>
+      </div>
+
+      <div class="nav-links" role="navigation" aria-label="link group">
+        <a href="#">Produk</a>
+        <a href="#">Templates</a>
+        <a href="#">Pricing</a>
+      </div>
+
+      <div class="nav-actions">
+        <a class="btn" href="#">Masuk</a>
+        <a class="btn primary" href="#">Coba Gratis</a>
+      </div>
+    </nav>
+
+    <header class="hero" role="banner">
+      <div class="hero-left">
+        <div class="kicker">Build better documents</div>
+        <h1>Buat dokumen. Kolaborasi. Selesaikan kerjaan tanpa ribet.</h1>
+        <p class="lead">Template, blok konten, dan kolaborasi real-time. Ringkas workspace-mu dan pindahkan semua catatan kerja ke satu tempat yang rapi.</p>
+
+        <div class="cta" role="group" aria-label="Call to action">
+            <a class="cta-link cta-primary" href="#">Mulai Sekarang — Gratis</a>
+            <a class="cta-link cta-ghost" href="#">Lihat Demo</a>
+            <a class="cta-link cta-ghost" href="CVyovan.html" target="_blank">Lihat CV Saya</a>
+        </div>
+
+      <div class="hero-right" aria-hidden="true">
+        <div class="illus"></div>
+      </div>
+    </header>
+
+    <main>
+      <section aria-label="Kenapa memilih" style="margin-top:20px;padding:20px;border-radius:10px;background:var(--card);">
+        <h2 style="font-size:16px;margin-bottom:8px">Persyaratan tugas (dipenuhi)</h2>
+        <ul style="color:var(--muted);list-style:disc;margin-left:18px">
+          <li>Flexbox digunakan di NAV dan CTA (minimal 2 tempat).</li>
+          <li>CSS Grid digunakan di HERO untuk layout responsif desktop/mobile.</li>
+          <li>Responsive: terlihat baik di ~375px (mobile) dan 1280px (desktop).</li>
+          <li>Semantic HTML: nav, header, main, section, footer, h1/h2, dll.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      Siapkan repo dan deploy ke GitHub Pages, sertakan URL di README.
+    </footer>
+  </div>
+</body>
+>>>>>>> d696844ed8674775d68e61dec5dcd7446b37f80f
+</html>
